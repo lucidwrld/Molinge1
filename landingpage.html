@@ -1,0 +1,2722 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image" href="images/logo.jpg">
+  <title>Molinge</title>
+  <style>
+    body {
+      margin: 0px;
+    }
+
+    .mobileview {
+      display: none;
+    }
+
+    .menubar {
+      width: 100%;
+      height: 15vh;
+    }
+
+    .logo {
+      height: 100%;
+      width: 25%;
+
+    }
+
+    .menu {
+      list-style: none;
+      height: 100%;
+      width: 75%;
+    }
+
+    .menuitems {
+      height: 100%;
+    }
+
+    .menuitems a {
+      text-decoration: none;
+    }
+
+    .slideshow {
+      margin-top: 15vh;
+      height: 85vh;
+      width: 100% auto;
+      overflow-x: auto;
+      display: flex;
+      border: 0px;
+    }
+
+    .show {
+      height: 85vh;
+      width: 100% auto;
+      margin: 0px;
+      margin-top: 0px;
+      margin-left: 0px;
+      border: 0px;
+    }
+
+    #show1 {
+      background-image: url(images/firstimage.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #show2 {
+      background-image: url(images/secondimage.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .leftdiv,
+    .rightdiv {
+      width: 10%;
+      height: 100%;
+    }
+
+    .leftdiv button,
+    .rightdiv button {
+      font-size: 45px;
+      color: rgb(206, 204, 204);
+    }
+
+    .middlediv {
+      width: 80%;
+      height: 100%;
+    }
+
+    .technii {
+      width: 100%;
+      height: 60%;
+    }
+
+    .technii h1 {
+      font-size: 60px;
+      text-shadow: 2px 2px #0e0d0d75;
+    }
+
+    .btntechni {
+      width: 45%;
+      height: 40%;
+    }
+
+    .btntechni button {
+      height: 8vh;
+      width: 30vh;
+    }
+
+    .holdlearn {
+      height: 105vh;
+      width: 100%;
+
+    }
+
+    .hold {
+      height: 100%;
+      width: 42%;
+      background-image: url(images/hold.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .learn {
+      height: 100%;
+      width: 58%;
+    }
+
+    .learn .card {
+      width: 350px;
+      height: 350px;
+      display: flex;
+      border: 0px;
+    }
+
+    .learn .card-top {
+      width: 100%;
+    }
+
+    .learn .card-top.user {
+      height: 10vh;
+    }
+
+    .learn .card-top.head {
+      height: 18vh;
+    }
+
+    .learn .card-top.head h2 {
+      margin-left: 20px;
+    }
+
+
+    .learn .card-body {
+      height: 20vh;
+    }
+
+    .learn .card-top .fa-user-circle {
+      font-size: 30px;
+      margin-left: 22px;
+    }
+
+    .learn .card-body p {
+      margin-left: 6px;
+    }
+
+    .learn .card-bottom {
+      margin-left: 10px;
+      margin-bottom: 40px;
+      height: 15vh;
+    }
+
+    .bookdiv {
+      width: 100%;
+      height: 40vh;
+    }
+
+    .booka {
+      width: 350px;
+      margin-left: 60px;
+    }
+
+    .booka h1 {
+      font-size: 55px;
+      color: rgb(2, 2, 68);
+    }
+
+    .consultation {
+      width: 100%;
+      height: 85vh;
+    }
+
+    .consult {
+      width: 60%;
+      height: 100%;
+    }
+
+    .consult .card-top {
+      width: 600px;
+      margin-left: 60px;
+    }
+
+    .consult .card-body {
+      height: 65vh;
+    }
+
+    .consult .card-body .first {
+      height: 100%;
+      width: 50%;
+    }
+
+    .consult .card-body .second {
+      height: 100%;
+      width: 43%;
+
+    }
+
+    .consult .card-body i {
+      width: 50px;
+      color: green;
+      font-size: 20px;
+    }
+
+    .consult .card-body h4 {
+      font-size: 20px;
+    }
+
+    .consult .card-body li {
+      margin-bottom: 50px;
+    }
+
+    .consult .card-bottom {
+      height: 12vh;
+    }
+
+    .consult .card-bottom button {
+      width: 300px;
+      height: 60px;
+      margin-left: 50px;
+    }
+
+    .consultimg {
+      width: 40%;
+      height: 100%;
+    }
+
+    .consultimg img {
+      width: 450px;
+      height: 500px;
+    }
+
+    .explore {
+      background-image: url(images/Rectangle.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 120vh;
+    }
+
+    .explore1 {
+      width: 100%;
+      height: 35vh;
+    }
+
+    .explore1 h1 {
+      font-size: 55px;
+    }
+
+    .explore1 p {
+      font-size: 24px;
+      width: 640px;
+
+    }
+
+    .explore2 {
+      width: 100%;
+      height: 60vh;
+    }
+
+    .explore2 .card {
+      height: 55vh;
+      width: 45vh;
+    }
+
+    .explore2 .card-top img {
+      width: 40vh;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .explore2 .card-body {
+      margin-top: -10px;
+    }
+
+    .explore2 .card-body h3 {
+      margin-left: 5px;
+    }
+
+    .explore2 .card-bottom {
+      height: 15vh;
+      margin-top: -15px;
+    }
+
+    .explore2 .card-bottom .closed {
+      margin-left: 15px;
+      font-weight: 900;
+    }
+
+    .explore3 {
+      height: 35vh;
+      width: 100%;
+      background-image: url(images/Rectangle.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .explore3 button {
+      width: 300px;
+      height: 70px;
+    }
+
+    @media (min-width: 1000px) and (max-width:1350px) {
+      .btntechni {
+        width: 85%;
+      }
+
+      .btntechni button {
+        width: 45vh;
+      }
+
+      .learn .card {
+        width: 270px;
+        height: 340px;
+        display: flex;
+        border: 0px;
+      }
+
+      .consult .card-body li {
+        margin-bottom: 30px;
+      }
+
+      .consultimg img {
+        width: 350px;
+        height: 400px;
+      }
+
+
+
+      .explore1 h1 {
+        font-size: 45px;
+      }
+
+      .explore1 p {
+        font-size: 14px;
+        width: 400px;
+
+      }
+
+
+      .explore2 .card {
+        height: 55vh;
+        width: 40vh;
+      }
+
+      .explore2 .card-top img {
+        width: 35vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .explore2 .card-body {
+        margin-top: -10px;
+      }
+
+      .explore2 .card-body h3 {
+        margin-left: 5px;
+        font-size: 20px;
+      }
+
+      .explore2 .card-bottom {
+        height: 15vh;
+        margin-top: -15px;
+      }
+
+      .explore2 .card-bottom .closed {
+        margin-left: 15px;
+        font-weight: 900;
+      }
+    }
+
+
+    /* mobile view */
+    @media (min-width:200px) and (max-width:999px) {
+      .desktopview {
+        display: none;
+      }
+
+      .mobileview {
+        display: block;
+      }
+
+      .mmenubar {
+        width: 100%;
+        height: 10vh;
+      }
+
+      .mlogo {
+        width: 250px;
+        height: 100%;
+      }
+
+      .dropdown {
+        display: inline-block;
+        position: relative;
+        height: 100%;
+
+      }
+
+      .dropdown-content {
+        display: block;
+        position: absolute;
+        width: 100%;
+        overflow: auto;
+        box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+      }
+
+      .dropdown-content.non {
+        display: none;
+      }
+
+      .dropdown-content li {
+        height: 4vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.527);
+      }
+
+      #dropbtn {
+        height: 100%;
+        width: 100px;
+
+      }
+
+      .fa-list {
+        font-size: 30px;
+        color: gray;
+      }
+
+      .dropdown-content button {
+        width: 100px;
+        height: 3vh;
+        font-size: 10px;
+        border-bottom: 0px;
+      }
+
+      .mobileshow {
+        width: 100%;
+        height: 100%;
+      }
+
+      .slideshow {
+        margin-top: 10vh;
+        height: 55vh;
+        width: 100% auto;
+        overflow-x: auto;
+        display: flex;
+        border: 0px;
+      }
+
+      .mshow {
+        height: 55vh;
+        width: 100% auto;
+        margin: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        border: 0px;
+      }
+
+      #show1 {
+        background-image: url(images/firstimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #show2 {
+        background-image: url(images/secondimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .technii {
+        width: 100%;
+        height: 40%;
+      }
+
+      .technii h1 {
+        font-size: 55px;
+        text-shadow: 2px 2px #0e0d0d75;
+      }
+
+      .btntechni {
+        width: 100%;
+        height: 40%;
+      }
+
+      .btntechni button {
+        height: 8vh;
+        width: 23vh;
+      }
+
+      .con {
+        width: 100%;
+        height: 10vh;
+      }
+
+      .learning {
+        width: 100%;
+        height: 75vh;
+        background-image: url(images/hold.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .learning .card {
+        width: 300px;
+        height: 300px;
+        display: flex;
+        border: 0px;
+        border-radius: 20px;
+      }
+
+      .learning .card-top {
+        width: 100%;
+      }
+
+      .learning .card-top.user {
+        height: 5vh;
+      }
+
+      .learning .fa-user-circle {
+        margin-left: 20px;
+        font-size: 35px;
+      }
+
+      .learning .card-top.head {
+        height: 7vh;
+      }
+
+      .learning .card-top.head h2 {
+        margin-left: 20px;
+      }
+
+
+      .learning .card-body {
+        height: 1vh;
+      }
+
+      .learn .card-top .fa-user-circle {
+        font-size: 30px;
+        margin-left: 22px;
+      }
+
+      .learn .card-body p {
+        margin-left: 6px;
+      }
+
+      .learning .card-bottom {
+        margin-left: 10px;
+        margin-bottom: 40px;
+        height: 5vh;
+      }
+
+      .learning .card-bottom button {
+        font-size: 25px;
+      }
+
+      .consul {
+        width: 100%;
+        height: 100%;
+      }
+
+      .consul h1 {
+        font-size: 53px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+      }
+
+      .consul .card {
+        margin-left: 43px;
+        width: 650px;
+
+      }
+
+      .consul .card-bottom img {
+        width: 650px;
+      }
+
+      .consul2 {
+        width: 100%;
+        height: 100%;
+      }
+
+      .consul2 h1 {
+        font-size: 53px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+        width: 280px;
+      }
+
+      .consul2 .card-top i {
+        width: 50px;
+        color: green;
+        font-size: 35px;
+      }
+
+      .consul2 .card-top h4 {
+        font-size: 30px;
+      }
+
+      .consul2 .card-top li {
+        margin-bottom: 25px;
+        margin-left: 70px;
+      }
+
+      .consul2 .card-bottom {
+        height: 10vh;
+      }
+
+      .consul2 .card-bottom button {
+        height: 9vh;
+        width: 40vh;
+        font-size: 30px;
+        font-weight: 500;
+        border-radius: 20px;
+      }
+
+      .mexplore {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 200vh;
+      }
+
+      .mexplore1 {
+        width: 100%;
+        height: 35vh;
+      }
+
+      .mexplore1 h1 {
+        font-size: 55px;
+      }
+
+      .mexplore1 p {
+        font-size: 24px;
+        width: 640px;
+
+      }
+
+      .mexplore2 {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 230vh;
+      }
+
+      .mexplore2 .card {
+        height: 55vh;
+        width: 45vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mexplore2 .card-top img {
+        width: 40vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .mexplore2 .card-body {
+        margin-top: -10px;
+
+      }
+
+      .mexplore2 .card-body h3 {
+        margin-left: 5px;
+        font-size: 40px;
+      }
+
+      .mexplore2 .card-bottom {
+        height: 15vh;
+        margin-top: -15px;
+        font-size: 20px;
+      }
+
+      .mexplore2 .card-bottom .closed {
+        margin-left: 20px;
+        font-weight: 900;
+      }
+
+      .mexplore3 {
+        height: 35vh;
+        width: 100%;
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .mexplore3 button {
+        width: 350px;
+        border-radius: 20px;
+        height: 100px;
+        font-size: 28px;
+      }
+    }
+
+    @media (min-width:923px) and (max-width: 999px) {
+
+
+      .slideshow {
+        margin-top: 10vh;
+        height: 65vh;
+
+      }
+
+      .mshow {
+        height: 65vh;
+        width: 100%;
+      }
+
+      .technii h1 {
+        font-size: 55px;
+        text-shadow: 2px 2px #0e0d0d75;
+      }
+
+      .btntechni {
+        width: 60%;
+        height: 40%;
+      }
+
+      .btntechni button {
+        height: 10vh;
+        width: 28vh;
+      }
+
+      .con {
+        width: 100%;
+        height: 5vh;
+      }
+
+      .learning {
+        width: 100%;
+        height: 90vh;
+        background-image: url(images/hold.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .learning .card {
+        width: 405px;
+        height: 400px;
+        display: flex;
+        border: 0px;
+        border-radius: 20px;
+      }
+
+      .learning .card-top {
+        width: 100%;
+      }
+
+      .learning .card-top.user {
+        height: 5vh;
+      }
+
+      .learning .fa-user-circle {
+        margin-left: 20px;
+        font-size: 25px;
+      }
+
+      .learning .card-top.head {
+        height: 5vh;
+
+      }
+
+      .learning .card-top.head h2 {
+        margin-left: 20px;
+        font-size: 22px;
+      }
+
+      .learning .card-body {
+        height: 8vh;
+      }
+
+      .learning .card-bottom {
+        margin-left: 10px;
+        margin-bottom: 40px;
+        height: 5vh;
+      }
+
+      .learning .card-bottom button {
+        font-size: 20px;
+      }
+
+      .consul {
+        width: 100%;
+        height: 170vh;
+
+      }
+
+      .consul h1 {
+        font-size: 53px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+        width: 200px;
+      }
+
+      .consul .card {
+        margin-left: 43px;
+        width: 810px;
+      }
+
+      .consul .card-bottom img {
+        width: 800px;
+
+      }
+
+      .consul2 {
+        width: 100%;
+        height: 140vh;
+      }
+
+      .consul2 h1 {
+        font-size: 53px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+        width: 310px;
+      }
+
+      .consul2 .card-top i {
+        width: 50px;
+        color: green;
+        font-size: 25px;
+      }
+
+      .consul2 .card-top h4 {
+        font-size: 25px;
+      }
+
+      .consul2 .card-top li {
+        margin-bottom: 25px;
+        margin-left: 50px;
+
+      }
+
+      .consul2 .card-bottom {
+        height: 20vh;
+
+      }
+
+      .consul2 .card-bottom button {
+        height: 15vh;
+        width: 40vh;
+        font-size: 40px;
+        font-weight: 500;
+        border-radius: 20px;
+      }
+
+      .mexplore {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 230vh;
+      }
+
+      .mexplore1 {
+        width: 100%;
+        height: 35vh;
+      }
+
+      .mexplore1 h1 {
+        font-size: 69px;
+      }
+
+      .mexplore1 p {
+        font-size: 23px;
+        width: 640px;
+
+      }
+
+      .mexplore2 {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 210vh;
+      }
+
+      .mexplore2 .card {
+        height: 50vh;
+        width: 45vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mexplore2 .card-top img {
+        width: 40vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .mexplore2 .card-body {
+        margin-top: -10px;
+
+      }
+
+      .mexplore2 .card-body h3 {
+        margin-left: 5px;
+        margin-top: -15px;
+        font-size: 29px;
+      }
+
+      .mexplore2 .card-bottom {
+        height: 6vh;
+        margin-top: -20px;
+        font-size: 15px;
+
+      }
+
+      .mexplore2 .card-bottom .closed {
+        margin-left: 0px;
+        font-weight: 900;
+      }
+
+      .mexplore3 {
+        height: 35vh;
+        width: 100%;
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .mexplore3 button {
+        width: 350px;
+        border-radius: 20px;
+        height: 100px;
+        font-size: 28px;
+      }
+    }
+
+    @media (min-width:500px) and (max-width: 699px) {
+
+
+      .slideshow {
+        margin-top: 10vh;
+        height: 45vh;
+
+      }
+
+      .mshow {
+        height: 45vh;
+        width: 100%;
+      }
+
+      #show1 {
+        background-image: url(images/firstimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+      }
+
+      #show2 {
+        background-image: url(images/secondimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+      }
+
+      .technii h1 {
+        font-size: 35px;
+        text-shadow: 2px 2px #0e0d0d75;
+      }
+
+      .btntechni {
+        width: 100%;
+        height: 40%;
+      }
+
+      .btntechni button {
+        height: 8vh;
+        width: 16vh;
+      }
+
+      .con {
+        width: 100%;
+        height: 30vh;
+      }
+
+      .learning {
+        width: 100%;
+        height: 75vh;
+        background-image: url(images/hold.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .learning .card {
+        width: 225px;
+        height: 300px;
+        display: flex;
+        border: 0px;
+        border-radius: 20px;
+      }
+
+      .learning .card-top {
+        width: 100%;
+      }
+
+      .learning .card-top.user {
+        height: 5vh;
+      }
+
+      .learning .fa-user-circle {
+        margin-left: 20px;
+        font-size: 25px;
+      }
+
+      .learning .card-top.head {
+        height: 5vh;
+
+      }
+
+      .learning .card-top.head h2 {
+        margin-left: 20px;
+        font-size: 22px;
+      }
+
+      .learning .card-body {
+        height: 8vh;
+      }
+
+      .learning .card-bottom {
+        margin-left: 10px;
+        margin-bottom: 40px;
+        height: 5vh;
+      }
+
+      .learning .card-bottom button {
+        font-size: 20px;
+      }
+
+      .consul {
+        width: 100%;
+        height: 80vh;
+
+      }
+
+      .consul h1 {
+        font-size: 53px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+      }
+
+      .consul .card {
+        margin-left: 43px;
+        width: 450px;
+
+      }
+
+      .consul .card-bottom img {
+        width: 400px;
+
+      }
+
+      .consul2 {
+        width: 100%;
+        height: 160vh;
+      }
+
+      .consul2 h1 {
+        font-size: 53px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+        width: 310px;
+      }
+
+      .consul2 .card-top i {
+        width: 50px;
+        color: green;
+        font-size: 25px;
+      }
+
+      .consul2 .card-top h4 {
+        font-size: 25px;
+      }
+
+      .consul2 .card-top li {
+        margin-bottom: 25px;
+        margin-left: 50px;
+
+      }
+
+      .consul2 .card-bottom {
+        height: 10vh;
+
+      }
+
+      .consul2 .card-bottom button {
+        height: 9vh;
+        width: 30vh;
+        font-size: 30px;
+        font-weight: 500;
+        border-radius: 20px;
+      }
+
+      .mexplore {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 215vh;
+      }
+
+      .mexplore1 {
+        width: 100%;
+        height: 35vh;
+      }
+
+      .mexplore1 h1 {
+        font-size: 39px;
+      }
+
+      .mexplore1 p {
+        font-size: 16px;
+        width: 440px;
+
+      }
+
+      .mexplore2 {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 180vh;
+      }
+
+      .mexplore2 .card {
+        height: 40vh;
+        width: 55vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mexplore2 .card-top img {
+        width: 50vh;
+        height: 25vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .mexplore2 .card-body {
+        margin-top: -27px;
+
+      }
+
+      .mexplore2 .card-body h3 {
+        margin-left: 5px;
+        font-size: 30px;
+      }
+
+      .mexplore2 .card-bottom {
+        height: 6vh;
+        margin-top: -10px;
+        font-size: 20px;
+
+      }
+
+      .mexplore2 .card-bottom .closed {
+        margin-left: -180px;
+        font-weight: 900;
+        margin-top: -10px;
+        font-size: 17px;
+      }
+
+      .mexplore3 {
+        height: 35vh;
+        width: 100%;
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .mexplore3 button {
+        width: 350px;
+        border-radius: 20px;
+        height: 100px;
+        font-size: 28px;
+      }
+    }
+
+
+    @media (min-width:400px) and (max-width: 499px) {
+
+
+      .slideshow {
+        margin-top: 10vh;
+        height: 30vh;
+
+      }
+
+      .mshow {
+        height: 30vh;
+        width: 100%;
+      }
+
+      #show1 {
+        background-image: url(images/firstimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+      }
+
+      #show2 {
+        background-image: url(images/secondimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+      }
+
+      .technii h1 {
+        font-size: 25px;
+        text-shadow: 2px 2px #0e0d0d75;
+      }
+
+      .btntechni {
+        width: 100%;
+        height: 40%;
+      }
+
+      .btntechni button {
+        height: 6vh;
+        width: 13vh;
+      }
+
+      .btntechni button {
+        font-size: 13px;
+      }
+
+      .con {
+        width: 100%;
+        height: 30vh;
+      }
+
+      .learning {
+        width: 100%;
+        height: 50vh;
+        background-image: url(images/hold.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .learning .card {
+        width: 187px;
+        height: 250px;
+        display: flex;
+        border: 0px;
+        border-radius: 20px;
+      }
+
+      .learning .card-top {
+        width: 100%;
+      }
+
+      .learning .card-top.user {
+        height: 5vh;
+      }
+
+      .learning .fa-user-circle {
+        margin-left: 20px;
+        font-size: 25px;
+      }
+
+      .learning .card-top.head {
+        height: 5vh;
+        margin-top: 13px;
+
+      }
+
+      .learning .card-top.head h2 {
+        margin-left: 20px;
+        font-size: 15px;
+      }
+
+      .learning .card-body {
+        height: 8vh;
+      }
+
+      .learning .card-body p {
+        font-size: 12px;
+      }
+
+      .learning .card-bottom {
+        margin-left: 10px;
+        margin-bottom: 40px;
+        height: 5vh;
+      }
+
+      .learning .card-bottom button {
+        font-size: 20px;
+      }
+
+      .consul {
+        width: 100%;
+        height: 90vh;
+
+      }
+
+      .consul h1 {
+        font-size: 43px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+      }
+
+      .consul .card {
+        margin-left: 43px;
+        width: 350px;
+
+      }
+
+      .consul .card h2 {
+        font-size: 17px;
+
+      }
+
+      .consul .card-bottom img {
+        width: 300px;
+
+      }
+
+      .consul2 {
+        width: 100%;
+        height: 110vh;
+      }
+
+      .consul2 h1 {
+        font-size: 43px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+        width: 310px;
+      }
+
+      .consul2 .card-top i {
+        width: 40px;
+        color: green;
+        font-size: 25px;
+      }
+
+      .consul2 .card-top h4 {
+        font-size: 20px;
+      }
+
+      .consul2 .card-top li {
+        margin-bottom: 25px;
+        margin-left: 45px;
+
+      }
+
+      .consul2 .card-bottom {
+        height: 8vh;
+
+      }
+
+      .consul2 .card-bottom button {
+        height: 7vh;
+        width: 25vh;
+        font-size: 30px;
+        font-weight: 500;
+        border-radius: 20px;
+      }
+
+      .mexplore {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 180vh;
+      }
+
+      .mexplore1 {
+        width: 100%;
+        height: 25vh;
+      }
+
+      .mexplore1 h1 {
+        font-size: 30px;
+      }
+
+      .mexplore1 p {
+        font-size: 16px;
+        width: 340px;
+
+      }
+
+      .mexplore2 {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 130vh;
+      }
+
+      .mexplore2 .card {
+        height: 30vh;
+        width: 35vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mexplore2 .card-top img {
+        width: 30vh;
+        height: 17vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .mexplore2 .card-body {
+        margin-top: -19px;
+
+      }
+
+      .mexplore2 .card-body h3 {
+        margin-left: 5px;
+        font-size: 25px;
+      }
+
+      .mexplore2 .card-bottom {
+        height: 6vh;
+        margin-top: -10px;
+        font-size: 20px;
+
+      }
+
+      .mexplore2 .card-bottom .closed {
+        margin-left: 0px;
+        font-weight: 900;
+        font-size: 15px;
+        margin-left: -130px;
+      }
+
+      .mexplore3 {
+        height: 25vh;
+        width: 100%;
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .mexplore3 button {
+        width: 250px;
+        border-radius: 20px;
+        height: 100px;
+        font-size: 20px;
+      }
+    }
+
+
+    @media (min-width:300px) and (max-width: 399px) {
+      .mlogo {
+        width: 100px;
+      }
+
+      .dropdown {
+        width: 80px;
+      }
+
+      #dropbtn {
+        width: 80px;
+      }
+
+      .mlogo img {
+        width: 100px;
+      }
+
+      .slideshow {
+        margin-top: 10vh;
+        height: 30vh;
+
+      }
+
+      .mshow {
+        height: 30vh;
+        width: 100%;
+      }
+
+      #show1 {
+        background-image: url(images/firstimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+      }
+
+      #show2 {
+        background-image: url(images/secondimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+      }
+
+      .technii h1 {
+        font-size: 20px;
+        text-shadow: 2px 2px #0e0d0d75;
+      }
+
+      .btntechni {
+        width: 100%;
+        height: 40%;
+      }
+
+      .btntechni button {
+        height: 5vh;
+        width: 10vh;
+      }
+
+      .btntechni button {
+        font-size: 10px;
+      }
+
+      .con {
+        width: 100%;
+        height: 30vh;
+      }
+
+      .learning {
+        width: 100%;
+        height: 35vh;
+        background-image: url(images/hold.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .learning .card {
+        width: 130px;
+        height: 150px;
+        display: flex;
+        border: 0px;
+        border-radius: 20px;
+      }
+
+      .learning .card-top {
+        width: 100%;
+      }
+
+      .learning .card-top.user {
+        height: 3vh;
+        margin-top: 10px;
+      }
+
+      .learning .fa-user-circle {
+        margin-left: 20px;
+        font-size: 15px;
+      }
+
+      .learning .card-top.head {
+        height: 5vh;
+        margin-top: 13px;
+
+      }
+
+      .learning .card-top.head h2 {
+        margin-left: 20px;
+        font-size: 10px;
+        height: 2vh;
+
+      }
+
+      .learning .card-body {
+        margin-top: -10px;
+        height: 5vh;
+      }
+
+      .learning .card-body p {
+        font-size: 8px;
+      }
+
+      .learning .card-bottom {
+        margin-left: 5px;
+        height: 3vh;
+      }
+
+      .learning .card-bottom button {
+        font-size: 10px;
+      }
+
+      .consul {
+        width: 100%;
+        height: 80vh;
+
+      }
+
+      .consul h1 {
+        font-size: 33px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+        width: 210px;
+      }
+
+      .consul .card {
+        margin-left: 43px;
+        width: 250px;
+
+      }
+
+      .consul .card h2 {
+        font-size: 15px;
+
+      }
+
+      .consul .card-bottom img {
+        width: 200px;
+
+      }
+
+      .consul2 {
+        width: 100%;
+        height: 115vh;
+      }
+
+      .consul2 h1 {
+        font-size: 33px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 40px;
+        width: 210px;
+      }
+
+      .consul2 .card-top i {
+        width: 30px;
+        color: green;
+        font-size: 15px;
+      }
+
+      .consul2 .card-top h4 {
+        font-size: 15px;
+      }
+
+      .consul2 .card-top li {
+        margin-bottom: 20px;
+        margin-left: 45px;
+
+      }
+
+      .consul2 .card-bottom {
+        height: 6vh;
+
+      }
+
+      .consul2 .card-bottom button {
+        height: 5vh;
+        width: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 20px;
+      }
+
+      .mexplore {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 160vh;
+      }
+
+      .mexplore1 {
+        width: 100%;
+        height: 15vh;
+      }
+
+      .mexplore1 h1 {
+        font-size: 21px;
+      }
+
+      .mexplore1 p {
+        font-size: 10px;
+        width: 240px;
+
+      }
+
+      .mexplore2 {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 110vh;
+      }
+
+      .mexplore2 .card {
+        height: 25vh;
+        width: 30vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mexplore2 .card-top img {
+        width: 27vh;
+        height: 15vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .mexplore2 .card-body {
+        margin-top: -25px;
+
+      }
+
+      .mexplore2 .card-body h3 {
+        margin-left: -82px;
+        font-size: 15px;
+      }
+
+      .mexplore2 .card-bottom {
+        height: 5vh;
+        margin-top: -20px;
+        font-size: 15px;
+
+      }
+
+      .mexplore2 .card-bottom .closed {
+        margin-left: 0px;
+        margin-left: -100px;
+        font-weight: 900;
+        font-size: 11px;
+      }
+
+      .mexplore3 {
+        height: 20vh;
+        width: 100%;
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .mexplore3 button {
+        width: 200px;
+        border-radius: 20px;
+        height: 80px;
+        font-size: 15px;
+      }
+    }
+
+
+    @media (min-width:250px) and (max-width: 299px) {
+      .mlogo {
+        width: 100px;
+      }
+
+      .dropdown {
+        width: 80px;
+      }
+
+      #dropbtn {
+        width: 80px;
+      }
+
+      .mlogo img {
+        width: 100px;
+      }
+
+      .slideshow {
+        margin-top: 10vh;
+        height: 25vh;
+
+      }
+
+      .mshow {
+        height: 25vh;
+        width: 100%;
+      }
+
+      #show1 {
+        background-image: url(images/firstimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+      }
+
+      #show2 {
+        background-image: url(images/secondimage.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+      }
+
+      .technii h1 {
+        font-size: 15px;
+        text-shadow: 2px 2px #0e0d0d75;
+      }
+
+      .btntechni {
+        width: 200px;
+        margin-left: -10px;
+        height: 40%;
+
+      }
+
+      .btntechni button {
+        height: 40px;
+        width: 85px;
+      }
+
+      .btntechni button {
+        font-size: 8px;
+      }
+
+      .con {
+        width: 100%;
+        height: 25vh;
+      }
+
+      .learning {
+        width: 100%;
+        height: 35vh;
+        background-image: url(images/hold.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .learning .card {
+        width: 110px;
+        height: 150px;
+        display: flex;
+        border: 0px;
+        border-radius: 20px;
+      }
+
+      .learning .card-top {
+        width: 100%;
+      }
+
+      .learning .card-top.user {
+        height: 3vh;
+        margin-top: 10px;
+      }
+
+      .learning .fa-user-circle {
+        margin-left: 20px;
+        font-size: 15px;
+      }
+
+      .learning .card-top.head {
+        height: 5vh;
+        margin-top: 13px;
+
+      }
+
+      .learning .card-top.head h2 {
+        margin-left: 10px;
+        font-size: 10px;
+        height: 2vh;
+
+      }
+
+      .learning .card-body {
+        margin-top: -10px;
+        height: 5vh;
+      }
+
+      .learning .card-body p {
+        font-size: 7px;
+      }
+
+      .learning .card-bottom {
+        margin-left: 5px;
+        height: 3vh;
+      }
+
+      .learning .card-bottom button {
+        font-size: 10px;
+      }
+
+      .consul {
+        width: 100%;
+        height: 80vh;
+
+      }
+
+      .consul h1 {
+        font-size: 26px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 20px;
+        width: 210px;
+      }
+
+      .consul .card {
+        margin-left: 20px;
+        width: 200px;
+
+      }
+
+      .consul .card h2 {
+        font-size: 13px;
+      }
+
+      .consul .card-bottom img {
+        width: 200px;
+
+      }
+
+      .consul2 {
+        width: 100%;
+        height: 120vh;
+      }
+
+      .consul2 h1 {
+        font-size: 26px;
+        color: rgb(2, 2, 68);
+        text-shadow: 1px 2px #0e0d0d75;
+        margin-left: 20px;
+        width: 210px;
+      }
+
+      .consul2 .card-top i {
+        width: 30px;
+        color: green;
+        font-size: 15px;
+      }
+
+      .consul2 .card-top h4 {
+        font-size: 15px;
+      }
+
+      .consul2 .card-top li {
+        margin-bottom: 20px;
+        margin-left: 25px;
+
+      }
+
+      .consul2 .card-bottom {
+        height: 5vh;
+
+      }
+
+      .consul2 .card-bottom button {
+        height: 5vh;
+        width: 16vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 20px;
+      }
+
+      .mexplore {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 150vh;
+      }
+
+      .mexplore1 {
+        width: 100%;
+        height: 18vh;
+      }
+
+      .mexplore1 h1 {
+        font-size: 15px;
+      }
+
+      .mexplore1 p {
+        font-size: 10px;
+        width: 200px;
+
+      }
+
+      .mexplore2 {
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 118vh;
+      }
+
+      .mexplore2 .card {
+        height: 25vh;
+        width: 28vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mexplore2 .card-top img {
+        width: 25vh;
+        height: 15vh;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      .mexplore2 .card-body {
+        margin-top: -5px;
+
+      }
+
+      .mexplore2 .card-body h3 {
+        margin-left: -82px;
+        margin-top: -20px;
+        font-size: 10px;
+      }
+
+      .mexplore2 .card-bottom {
+        height: 5vh;
+        margin-left: -82px;
+        margin-top: -30px;
+        font-size: 8px;
+
+      }
+
+      .mexplore2 .card-bottom .closed {
+        margin-left: 0px;
+        font-weight: 900;
+        font-size: 10px;
+      }
+
+      .mexplore3 {
+        height: 20vh;
+        width: 100%;
+        background-image: url(images/Rectangle.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .mexplore3 button {
+        width: 180px;
+        border-radius: 20px;
+        height: 70px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- desktop view -->
+  <section class="desktopview" style="margin: 0px; margin-left: 0px;">
+    <!-- navigation bar div -->
+    <div class="container-fluid bg-light fixed-top menubar d-inline-block">
+      <!-- logo div -->
+      <div class="container-fluid bg-light float-start logo d-flex justify-content-center align-items-center">
+        <!-- logo image -->
+        <img src="images\logo.jpg" alt="logo">
+      </div>
+      <!-- options -->
+      <div class="container-fluid bg-light float-end menu">
+        <ul class="d-flex justify-content-between align-items-center list-unstyled menuitems">
+          <li><a href="landingpage.html" class="text-black fw-semibold">Home</a></li>
+          <li><a href="http://" class="text-dark">About Us</a></li>
+          <li><a href="http://" class="text-dark">Services</a></li>
+          <li><a href="http://" class="text-dark">Properties</a></li>
+          <li><a href="http://" class="text-dark">Pricing</a></li>
+          <li><a href="http://" class="text-dark">Blog</a></li>
+          <li><a href="http://" class="text-dark">FAQ</a></li>
+          <li><a href="http://" class="text-dark">Contact</a></li>
+          <li><a href="http://" class="text-dark"><button class="btn btn-success">Submit Request</button></a></li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- slideshow div -->
+    <div class="container-fluid bg-light slideshow" id="slideshow">
+      <!-- container for the first slide -->
+      <div class="container-fluid justify-content-between show" id="show1">
+        <!-- div for the previous button -->
+        <div class="container-fluid  d-flex justify-content-center align-items-center leftdiv">
+          <!-- previous button -->
+          <button class="btn"><i class="fa fa-angle-left" id="previous"></i></button>
+        </div>
+        <!-- div for the main advert -->
+        <div class="container-fluid  middlediv d-block">
+          <div class="container-fluid text-light d-flex align-items-end  technii">
+            <h1 class="text-light">Need Trusted <span style="color: orange;">Technician</span> For Your <span
+                style="color: orange;">Project?</span></h1>
+
+          </div>
+          <div class="container-fluid  float-start btntechni d-flex justify-content-between">
+            <button class="btn btn-light text-dark fw-semibold my-4">Hire Now</button>
+            <button class="btn btn-light text-success fw-semibold my-4">Register as a Technician</button>
+          </div>
+        </div>
+        <!-- div for the next button -->
+        <div class="container-fluid  d-flex justify-content-center align-items-center rightdiv">
+          <!-- next button -->
+          <button class="btn"><i class="fa fa-angle-right" id="next"></i></button>
+        </div>
+      </div>
+      <!-- container for the second slide -->
+      <div class="container-fluid justify-content-between show" id="show2">
+        <!-- div for previous button -->
+        <div class="container-fluid  d-flex justify-content-center align-items-center leftdiv">
+          <!-- previous button -->
+          <button class="btn"><i class="fa fa-angle-left" id="previouss"></i></button>
+        </div>
+        <!-- div for main advert -->
+        <div class="container-fluid  middlediv d-block">
+          <div class="container-fluid text-light d-flex align-items-end  technii">
+            <h1 class="text-light">From <span style="color: orange;">Douala</span> to <span
+                style="color: orange;">Lagos</span> To <span style="color: orange;">Capetown</span> Buy or sell your
+              Properties
+            </h1>
+
+          </div>
+          <div class="container-fluid  float-start btntechni d-flex justify-content-between">
+            <button class="btn btn-light text-dark fw-semibold my-4">Buy Now</button>
+            <button class="btn btn-light text-success fw-semibold my-4">Sell Now</button>
+          </div>
+        </div>
+        <!-- div for next button -->
+        <div class="container-fluid  d-flex justify-content-center align-items-center rightdiv">
+          <!-- next button -->
+          <button class="btn"><i class="fa fa-angle-right" id="nextt"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- div for the learning section -->
+    <div class="container-fluid d-inline-block bg-light holdlearn">
+
+      <div class="container-fluid float-start  hold"></div>
+      <div class="container-fluid float-start d-flex flex-wrap justify-content-between learn fw-bold">
+        <!-- card for each options of learning -->
+        <div class="card bg-success text-light my-3">
+          <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+          <div class="card-top head">
+            <h2 class="text-light">Buy a Property</h2>
+          </div>
+          <div class="card-body">
+            <p>Property Management (Rental and Private)</p>
+          </div>
+          <div class="card-bottom">
+            <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+
+        <div class="card bg-success text-light my-3">
+          <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+          <div class="card-top  head">
+            <h2 class="text-light">Sell a Property</h2>
+          </div>
+          <div class="card-body">
+            <p>General Brokerage Services</p>
+          </div>
+          <div class="card-bottom">
+            <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+
+        <div class="card bg-success text-light my-3">
+          <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+          <div class="card-top  head">
+            <h2 class="text-light">Request a Technical service</h2>
+          </div>
+          <div class="card-body">
+            <p>Technician Service with Relevant skills</p>
+          </div>
+          <div class="card-bottom">
+            <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+
+        <div class="card bg-success text-light my-3">
+          <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+          <div class="card-top  head">
+            <h2 class="text-light">Become an Agent</h2>
+          </div>
+          <div class="card-body">
+            <p>Facilitation of the acquisition of Properties and get a comission</p>
+          </div>
+          <div class="card-bottom">
+            <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- div for book consultation -->
+    <div class="container-fluid bg-light bookdiv d-flex align-items-end">
+      <div class="container-fluid bg-light booka">
+        <h1 class=" fw-bolder">Book A consultation</h1>
+      </div>
+    </div>
+    <!-- div containing each options to be consulted on -->
+    <div class="container-fluid consultation d-flex bg-light">
+
+      <div class="container-fluid consult d-block bg-light ">
+
+        <div class="card bg-light border-0">
+          <!-- div containing the heading -->
+          <div class="card-top bg-light">
+            <h5 class="text-dark">We provide expert advise on real estate at the convenience of your mobile phone</h1>
+          </div>
+          <!-- div containing the two parts -->
+          <div class="card-body d-inline-block">
+            <!-- div for the second part of options -->
+            <div class="container-fluid second  float-end">
+              <ul class="list-unstyled ">
+                <!-- listing the options -->
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-shower"></i>
+                  <h4 class="fw-bolder">Land Title</h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-file"></i>
+                  <h4 class="fw-bolder">Construction / Interior Design</h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-file"></i>
+                  <h4 class="fw-bolder">Taxes</h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-file"></i>
+                  <h4 class="fw-bolder">Business Plan</h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-file"></i>
+                  <h4 class="fw-bolder">Workshop / Trainings</h4>
+                </li>
+
+              </ul>
+            </div>
+            <!-- div for the first part of options -->
+            <div class="container-fluid first  float-end">
+              <ul class="list-unstyled ">
+                <!-- listing the options -->
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-shield"></i>
+                  <h4 class="fw-bolder">Land / House Acquisition</h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-user-circle"></i>
+                  <h4 class="fw-bolder">Listing / Selling / Partnership</h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-user-circle"></i>
+                  <h4 class="fw-bolder">Brokerage services </h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-user-circle"></i>
+                  <h4 class="fw-bolder">Event Hosting</h4>
+                </li>
+                <li class="d-flex align-items-center ">
+                  <i class="fa fa-user-circle"></i>
+                  <h4 class="fw-bolder">Execution of Private & Public Contracts</h4>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+          <div class="card-bottom">
+            <button class="btn btn-success fw-bolder fs-5">Consult</button>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid consultimg d-block bg-light">
+        <img class="float-start rounded-2" src="images\agent.jpg" alt="agent">
+      </div>
+    </div>
+
+    <div class="container-fluid bg-light" style="width: 100%; height: 10vh;"></div>
+    <!-- div for the agents -->
+    <div class="container-fluid explore d-block">
+      <!-- div containing the heading -->
+      <div class="container-fluid explore1 d-flex flex-column align-items-center justify-content-center">
+        <h1 style="color: rgb(2, 63, 2);" class="fw-bolder">Explore Featured Agents</h1>
+        <p style="color: rgb(2, 63, 2);" class="text-center fw-normal">An agent is anyone who brings us buyers or
+          property to sell. Register with
+          us as an
+          agent, let's close deals with you get a fair commission.</p>
+      </div>
+      <!-- div containing information about the agents -->
+      <div class="container-fluid explore2 d-flex justify-content-between">
+        <!-- cards for each agents -->
+        <div class="card bg-light rounded-4 border-0">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/IMG_E8401.png" alt="ashley">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Ashley Nkongho</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">68 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">5years Experience</h6>
+          </div>
+        </div>
+
+        <div class="card bg-light rounded-4 border-0">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/molinge.png" alt="Molinge">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Molinge Henry</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">105 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">12years Experience</h6>
+          </div>
+        </div>
+
+        <div class="card bg-light rounded-4 border-0">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/Marion5.png" alt="Marion">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Marion Ngwese</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">62 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">5years Experience</h6>
+          </div>
+        </div>
+
+        <div class="card bg-light rounded-4 border-0">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/deresy.png" alt="deresy">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Deresy Ndinde</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">41 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">4years Experience</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid explore3 d-flex justify-content-center align-items-center">
+        <button class="btn btn-success">Register as an agent</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- mobile view -->
+  <!-- exact replica of the desktopview but with minor adjustments -->
+  <section class="mobileview" style="margin: 0px; margin-left: 0px;">
+    <div class="container-fluid bg-light fixed-top mmenubar d-inline-block">
+      <div class="container-fluid  float-start mlogo d-flex justify-content-center align-items-center">
+        <img src="images\logo.jpg" alt="logo">
+      </div>
+
+      <div class="dropdown text-light float-end">
+        <button class="btn text-black border-0" id="dropbtn">
+          <i class="fa fa-list"></i>
+        </button>
+        <!--  profile dropdown menu -->
+        <div class="dropdown-content non bg-light rounded-3 " id="dropcont">
+          <ul class="d-block justify-content-between align-items-center list-unstyled menuitems">
+            <li><a href="http://" class="text-black fw-semibold">Home</a></li>
+            <li><a href="http://" class="text-dark">About Us</a></li>
+            <li><a href="http://" class="text-dark">Services</a></li>
+            <li><a href="http://" class="text-dark">Properties</a></li>
+            <li><a href="http://" class="text-dark">Pricing</a></li>
+            <li><a href="http://" class="text-dark">Blog</a></li>
+            <li><a href="http://" class="text-dark">FAQ</a></li>
+            <li><a href="http://" class="text-dark">Contact</a></li>
+            <li><a href="http://" class="text-dark"><button class="btn btn-success">Submit Request</button></a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container-fluid bg-light slideshow" id="slideshow">
+      <div class="container-fluid justify-content-between mshow" id="show1">
+        <div class="container-fluid  mobileshow d-block">
+          <div class="container-fluid text-light d-flex align-items-end  technii">
+            <h1 class="text-light">Need Trusted <span style="color: orange;">Technician</span> For Your <span
+                style="color: orange;">Project?</span></h1>
+
+          </div>
+          <div class="container-fluid  float-start btntechni d-flex justify-content-between">
+            <button class="btn btn-light text-dark fw-semibold my-4 rounded-5">Hire Now</button>
+            <button class="btn btn-light text-success fw-semibold my-4 rounded-5">Register as a Technician</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid justify-content-between mshow" id="show2">
+
+        <div class="container-fluid  mobileshow d-block">
+          <div class="container-fluid text-light d-flex align-items-end  technii">
+            <h1 class="text-light">From <span style="color: orange;">Douala</span> to <span
+                style="color: orange;">Lagos</span> To <span style="color: orange;">Capetown</span> Buy or sell your
+              Properties
+            </h1>
+
+          </div>
+          <div class="container-fluid  float-start btntechni d-flex justify-content-between">
+            <button class="btn btn-light text-dark fw-bold my-4 rounded-5">Buy Now</button>
+            <button class="btn btn-light text-success fw-bold my-4 rounded-5">Sell Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-light con"></div>
+
+    <div class="container-fluid d-flex flex-wrap justify-content-around learning fw-bold">
+      <div class="card bg-success text-light my-3">
+        <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+        <div class="card-top head">
+          <h2 class="text-light">Buy a Property</h2>
+        </div>
+        <div class="card-body">
+          <p>Property Management (Rental and Private)</p>
+        </div>
+        <div class="card-bottom">
+          <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+        </div>
+      </div>
+
+      <div class="card bg-success text-light my-3">
+        <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+        <div class="card-top  head">
+          <h2 class="text-light">Sell a Property</h2>
+        </div>
+        <div class="card-body">
+          <p>General Brokerage Services</p>
+        </div>
+        <div class="card-bottom">
+          <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+        </div>
+      </div>
+
+      <div class="card bg-success text-light my-3">
+        <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+        <div class="card-top  head">
+          <h2 class="text-light">Request a Technical service</h2>
+        </div>
+        <div class="card-body">
+          <p>Technician Service with Relevant skills</p>
+        </div>
+        <div class="card-bottom">
+          <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+        </div>
+      </div>
+
+      <div class="card bg-success text-light my-3">
+        <div class="card-top user d-flex align-items-end"><i class="fa fa-user-circle "></i> </div>
+        <div class="card-top  head">
+          <h2 class="text-light">Become an Agent</h2>
+        </div>
+        <div class="card-body">
+          <p>Facilitation of the acquisition of Properties and get a comission</p>
+        </div>
+        <div class="card-bottom">
+          <a href="http://"><button class="btn text-light">Learn More <i class="fa fa-arrow-right"></i></button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-light con"></div>
+    <div class="container-fluid bg-light consul">
+      <h1 class=" fw-bolder">Book A consultation</h1>
+      <div class="card border-0 bg-light">
+        <div class="card-top my-4">
+          <h2 class="text-dark">We provide expert advise on real estate at the convenience of your mobile phone</h1>
+        </div>
+        <div class="card-bottom my-4">
+          <img src="images/agent.jpg" class="rounded-4" alt="customer">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-light consul2">
+      <h1 class=" fw-bolder">Book A consultation</h1>
+      <div class="card border-0 bg-light">
+        <div class="card-top my-4">
+          <ul class="list-unstyled con2">
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-shield"></i>
+              <h4 class="fw-bolder">Land / House Acquisition</h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-user-circle"></i>
+              <h4 class="fw-bolder">Workshop / Training</h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-user-circle"></i>
+              <h4 class="fw-bolder">Brokerage services </h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-user-circle"></i>
+              <h4 class="fw-bolder">Event Hosting</h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-user-circle"></i>
+              <h4 class="fw-bolder">Execution of Private & Public Contracts</h4>
+            </li>
+
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-shower"></i>
+              <h4 class="fw-bolder">Land Title</h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-file"></i>
+              <h4 class="fw-bolder">Construction / Interior Design</h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-file"></i>
+              <h4 class="fw-bolder">Taxes</h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-file"></i>
+              <h4 class="fw-bolder">Listing / Selling / Partnership</h4>
+            </li>
+            <li class="d-flex align-items-center ">
+              <i class="fa fa-file"></i>
+              <h4 class="fw-bolder">Business Plan</h4>
+            </li>
+
+
+          </ul>
+        </div>
+        <div class="card-bottom my-4 d-flex justify-content-center align-items-center">
+          <button class="btn btn-success">Consult</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mexplore d-block">
+      <div class="container-fluid mexplore1 d-flex flex-column align-items-center justify-content-center">
+        <h1 style="color: rgb(2, 63, 2);" class="fw-bolder">Explore Featured Agents</h1>
+        <p style="color: rgb(2, 63, 2);" class="text-center fw-normal">An agent is anyone who brings us buyers or
+          property to sell. Register with
+          us as an
+          agent, let's close deals with you get a fair commission.</p>
+      </div>
+
+      <div
+        class="container-fluid mexplore2 d-flex flex-column justify-content-between justify-content-center align-items-center">
+        <div class="card bg-light rounded-4 border-0 ">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/IMG_E8401.png" alt="ashley">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Ashley Nkongho</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">68 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">5years Experience</h6>
+          </div>
+        </div>
+
+        <div class="card bg-light rounded-4 border-0 ">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/molinge.png" alt="Molinge">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Molinge Henry</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">105 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">12years Experience</h6>
+          </div>
+        </div>
+
+        <div class="card bg-light rounded-4 border-0 ">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/Marion5.png" alt="Marion">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Marion Ngwese</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">62 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">5years Experience</h6>
+          </div>
+        </div>
+
+        <div class="card bg-light rounded-4 border-0 ">
+          <div class="card-top my-3 d-flex justify-content-center">
+            <img src="images/deresy.png" alt="deresy">
+          </div>
+          <div class=" card-body">
+            <h3 class="text-success fw-bold">Deresy Ndinde</h3>
+          </div>
+          <div class="card-bottom d-flex flex-column">
+            <h8 class="text-dark fw-semibold closed">41 Closed Sales</h8>
+            <h6 class="fw-bolder closed" style="color: rgb(2, 2, 68);">4years Experience</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid mexplore3 d-flex justify-content-center align-items-center">
+        <button class="btn btn-success fw-bold">Register as an agent</button>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+  <script>let advertNo = 0;
+    /* javascript function for the slideshow desktopview */
+
+    advertFun();
+    function advertFun() {
+      /*  getting the slides */
+      let ads = document.getElementsByClassName("show");
+      /* getting the buttons */
+      let next = document.querySelector('#next')
+      let previous = document.querySelector('#previous')
+      let nextt = document.querySelector('#nextt')
+      let previouss = document.querySelector('#previouss')
+
+      /* creating the loop */
+      for (let i = 0; i < ads.length; i++) {
+        /* setting it to display none */
+        ads[i].style.display = "none"
+      }
+      advertNo++;
+      if (advertNo > ads.length) {
+        advertNo = 1;
+      }
+      /* setting the particular slide to display */
+      ads[advertNo - 1].style.display = "flex";
+      /*  setting the time interval between each */
+      setTimeout(advertFun, 18000)
+
+      /* adding the functions for the buttons */
+      next.addEventListener('click', function (e) {
+        let exact = this.parentNode.parentNode.parentNode.id;
+        console.log(this.parentNode.parentNode.parentNode.id)
+        if (exact === "show1") {
+          ads[0].style.display = "none";
+          ads[1].style.display = "flex";
+        }
+      })
+      nextt.addEventListener('click', function (e) {
+        let exact = this.parentNode.parentNode.parentNode.id;
+        console.log(this.parentNode.parentNode.parentNode.id)
+        if (exact === "show2") {
+          ads[1].style.display = "none";
+          ads[0].style.display = "flex";
+        }
+      })
+      previous.addEventListener('click', function (e) {
+        let exact = this.parentNode.parentNode.parentNode.id;
+        console.log(this.parentNode.parentNode.parentNode.id)
+        if (exact === "show1") {
+          ads[0].style.display = "none";
+          ads[1].style.display = "flex";
+        }
+      })
+      previouss.addEventListener('click', function (e) {
+        let exact = this.parentNode.parentNode.parentNode.id;
+        console.log(this.parentNode.parentNode.parentNode.id)
+        if (exact === "show2") {
+          ads[1].style.display = "none";
+          ads[0].style.display = "flex";
+        }
+      })
+
+
+    }
+  </script>
+  <script>const dropbtn = document.querySelector('#dropbtn')
+    const dropcont = document.querySelector("#dropcont")
+    dropbtn.addEventListener('click', function (e) {
+      dropcont.classList.toggle('non')
+    })
+  </script>
+  <script>let madvertNo = 0;
+
+    advertM()
+    function advertM() {
+      let mads = document.getElementsByClassName("mshow");
+
+
+      for (let i = 0; i < mads.length; i++) {
+        mads[i].style.display = "none"
+      }
+      madvertNo++;
+      if (madvertNo > mads.length) {
+        madvertNo = 1;
+      }
+      mads[madvertNo - 1].style.display = "flex";
+      setTimeout(advertM, 18000)
+
+    }
+
+  </script>
+</body>
+
+</html>
